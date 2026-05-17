@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Реєстрація — StyleLviv</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .reg-page { min-height: calc(100vh - 100px); display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .reg-container { max-width: 900px; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; }
+    .reg-info { background: linear-gradient(135deg, #6b21a8, #a855f7); border-radius: 18px; padding: 36px; color: #fff; }
+    .reg-info h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 14px; }
+    .reg-info p { font-size: .9rem; opacity: .88; line-height: 1.7; margin-bottom: 20px; }
+    .reg-benefits { list-style: none; }
+    .reg-benefits li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: .88rem; }
+    .reg-benefits li::before { content: '✅'; font-size: .9rem; }
+    @media (max-width: 640px) { .reg-container { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <span>🚚 Безкоштовна доставка при замовленні від 1 500 ₴</span>
+  <span>📍 Магазин у Львові, вул. Князя Романа, 18</span>
+</div>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">Style<span>Lviv</span></a>
+    <button class="mobile-menu-btn">☰</button>
+    <nav class="main-nav">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Головна</a>
+      <a href="catalog.html"><i class="fa-solid fa-shirt"></i> Каталог</a>
+      <a href="new.html"><i class="fa-solid fa-star"></i> Новинки</a>
+      <a href="actions.html"><i class="fa-solid fa-tag"></i> Акції</a>
+      <a href="sizes.html"><i class="fa-solid fa-ruler"></i> Розміри</a>
+      <a href="about.html"><i class="fa-solid fa-circle-info"></i> Про нас</a>
+      <a href="contacts.html"><i class="fa-solid fa-location-dot"></i> Контакти</a>
+    </nav>
+    <div class="header-icons">
+      <a href="cart.html" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span></a>
+      <button class="auth-btn" data-open-auth>УВ</button>
+    </div>
+  </div>
+</header>
+
+<div class="reg-page">
+  <div class="reg-container">
+    <div class="reg-info">
+      <h2>👋 Приєднуйся до StyleLviv!</h2>
+      <p>Створи безкоштовний акаунт та отримай доступ до ексклюзивних переваг нашого магазину.</p>
+      <ul class="reg-benefits">
+        <li>Швидке оформлення замовлень</li>
+        <li>Знижка -5% на першу покупку в магазині</li>
+        <li>Відстеження замовлень онлайн</li>
+        <li>Персональні рекомендації</li>
+        <li>Сповіщення про нові акції</li>
+        <li>Збереження улюблених товарів</li>
+      </ul>
+      <div style="margin-top:24px;font-size:.82rem;opacity:.8">
+        Вже маєте акаунт? 
+        <a href="#" onclick="document.getElementById('authModal').classList.add('show');return false;" style="color:#fff;font-weight:700;text-decoration:underline">Увійти</a>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3>📝 Реєстрація</h3>
+      <form id="registerFormPage">
+        <div class="form-group">
+          <label>Ім'я та прізвище *</label>
+          <input type="text" name="name" placeholder="Введіть ваше ім'я" required minlength="2"/>
+        </div>
+        <div class="form-group">
+          <label>Email адреса *</label>
+          <input type="email" name="email" placeholder="your@email.com" required/>
+        </div>
+        <div class="form-group">
+          <label>Номер телефону</label>
+          <input type="tel" name="phone" placeholder="+380 __ ___ __ __"/>
+        </div>
+        <div class="form-group">
+          <label>Пароль * <small style="color:var(--gray)">(мінімум 6 символів)</small></label>
+          <input type="password" name="pass" id="regPass" placeholder="••••••••" required minlength="6"/>
+        </div>
+        <div class="form-group">
+          <label>Підтвердіть пароль *</label>
+          <input type="password" name="pass2" id="regPass2" placeholder="••••••••" required/>
+        </div>
+        <div class="form-group">
+          <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;font-size:.82rem;color:var(--gray);font-weight:400">
+            <input type="checkbox" name="agree" id="agreeCheck" style="margin-top:3px;accent-color:var(--purple);" required/>
+            Я погоджуюсь з <a href="#" style="color:var(--purple)">умовами використання</a> та <a href="#" style="color:var(--purple)">політикою конфіденційності</a>
+          </label>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;padding:13px;font-size:1rem">
+          <i class="fa-solid fa-user-plus"></i> Зареєструватись
+        </button>
+        <p style="text-align:center;margin-top:14px;font-size:.82rem;color:var(--gray)">
+          Вже маєте акаунт? 
+          <a href="#" onclick="document.getElementById('authModal').classList.add('show');return false;" style="color:var(--purple);font-weight:700">Увійти</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL for registration -->
+<div class="modal-overlay" id="regSuccessModal">
+  <div class="modal-box" style="text-align:center">
+    <div style="font-size:3rem;margin-bottom:14px">🎉</div>
+    <h3>Реєстрація успішна!</h3>
+    <p style="color:var(--gray);font-size:.9rem;margin-top:8px;line-height:1.6">
+      Вітаємо в StyleLviv!<br>
+      Ваш акаунт створено успішно. Тепер ви можете робити покупки!
+    </p>
+    <button class="btn-primary" style="margin-top:20px;width:100%" onclick="location.href='index.html'">
+      На головну 🏠
+    </button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="logo-f">Style<span>Lviv</span></span><p>Якісний одяг для всієї родини. Актуальні тренди та доступні ціни у Львові.</p></div>
+    <div class="footer-col"><h5>Каталог</h5><a href="catalog.html?cat=tshirt">Футболки</a><a href="catalog.html?cat=shirt">Сорочки</a><a href="catalog.html?cat=jeans">Джинси</a></div>
+    <div class="footer-col"><h5>Відділи</h5><a href="men.html">Чоловічий</a><a href="women.html">Жіночий</a><a href="kids.html">Дитячий</a></div>
+    <div class="footer-col"><h5>Інформація</h5><a href="sizes.html">Таблиця розмірів</a><a href="about.html">Про магазин</a><a href="contacts.html">Контакти</a></div>
+    <div class="footer-col"><h5>Контакти</h5><a href="tel:+380322221616">📞 +38 (032) 222-16-16</a><a href="contacts.html">📍 вул. Князя Романа, 18</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 StyleLviv. Всі права захищені.</span>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" class="ig"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://t.me" target="_blank" class="tg"><i class="fa-brands fa-telegram"></i></a>
+    </div>
+  </div>
+</footer>
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box">
+    <button class="modal-close">✕</button>
+    <h3>👋 StyleLviv</h3>
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-tab="loginForm">Вхід</button>
+      <button class="modal-tab" data-tab="registerForm">Реєстрація</button>
+    </div>
+    <form id="loginForm" class="modal-form">
+      <div class="form-group"><label>Email</label><input type="email" name="email" required/></div>
+      <div class="form-group"><label>Пароль</label><input type="password" name="pass" required/></div>
+      <button type="submit" class="btn-primary" style="width:100%">Увійти</button>
+    </form>
+    <form id="registerForm" class="modal-form" style="display:none">
+      <div class="form-group"><label>Ім'я</label><input type="text" name="name" required/></div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" required/></div>
+      <div class="form-group"><label>Пароль</label><input type="password" name="pass" required/></div>
+      <div class="form-group"><label>Повторіть пароль</label><input type="password" name="pass2" required/></div>
+      <button type="submit" class="btn-primary" style="width:100%">Зареєструватись</button>
+    </form>
+  </div>
+</div>
+<script src="scripts.js"></script>
+<script>
+  const regPageForm = document.getElementById('registerFormPage');
+  if (regPageForm) {
+    regPageForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.querySelector('[name=name]').value.trim();
+      const email = this.querySelector('[name=email]').value.trim();
+      const pass = this.querySelector('[name=pass]').value;
+      const pass2 = this.querySelector('[name=pass2]').value;
+      const agree = this.querySelector('[name=agree]').checked;
+      if (!name || !email || !pass) { showNotif('Заповніть всі обов\'язкові поля', '⚠️'); return; }
+      if (pass !== pass2) { showNotif('Паролі не співпадають', '❌'); return; }
+      if (pass.length < 6) { showNotif('Пароль мінімум 6 символів', '⚠️'); return; }
+      if (!agree) { showNotif('Підтвердіть згоду з умовами', '⚠️'); return; }
+      const users = JSON.parse(localStorage.getItem('sl_users') || '[]');
+      if (users.find(u => u.email === email)) { showNotif('Email вже зареєстровано', '❌'); return; }
+      const user = { name, email, password: pass };
+      users.push(user);
+      localStorage.setItem('sl_users', JSON.stringify(users));
+      localStorage.setItem('sl_loggedIn', JSON.stringify(user));
+      document.getElementById('regSuccessModal').classList.add('show');
+    });
+  }
+  document.querySelector('#regSuccessModal .modal-close') && document.querySelector('#regSuccessModal .modal-close').addEventListener('click', () => {
+    document.getElementById('regSuccessModal').classList.remove('show');
+    location.href = 'index.html';
+  });
+</script>
+</body>
+</html>

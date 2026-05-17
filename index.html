@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StyleLviv — Магазин одягу у Львові</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>🚚 Безкоштовна доставка при замовленні від 1 500 ₴</span>
+  <span>📍 Магазин у Львові, вул. Князя Романа, 18</span>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">Style<span>Lviv</span></a>
+    <button class="mobile-menu-btn" aria-label="Меню">☰</button>
+    <nav class="main-nav">
+      <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Головна</a>
+      <a href="catalog.html"><i class="fa-solid fa-shirt"></i> Каталог</a>
+      <a href="new.html"><i class="fa-solid fa-star"></i> Новинки</a>
+      <a href="actions.html"><i class="fa-solid fa-tag"></i> Акції</a>
+      <a href="sizes.html"><i class="fa-solid fa-ruler"></i> Розміри</a>
+      <a href="about.html"><i class="fa-solid fa-circle-info"></i> Про нас</a>
+      <a href="contacts.html"><i class="fa-solid fa-location-dot"></i> Контакти</a>
+    </nav>
+    <div class="header-icons">
+      <a href="cart.html" class="icon-btn" title="Кошик">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="auth-btn" data-open-auth>УВ</button>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE WRAP -->
+<div class="page-wrap">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-sticky">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Категорії</div>
+        <a href="catalog.html?cat=tshirt"><span class="s-icon">👕</span> Футболки</a>
+        <a href="catalog.html?cat=shirt"><span class="s-icon">👔</span> Сорочки</a>
+        <a href="catalog.html?cat=jeans"><span class="s-icon">👖</span> Джинси</a>
+        <a href="catalog.html?cat=dress"><span class="s-icon">👗</span> Сукні</a>
+        <a href="catalog.html?cat=jacket"><span class="s-icon">🧥</span> Куртки</a>
+        <a href="catalog.html?cat=hoodie"><span class="s-icon">🧶</span> Худі</a>
+        <a href="catalog.html?cat=pants"><span class="s-icon">👖</span> Штани</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Відділи</div>
+        <a href="men.html"><span class="s-icon">🚹</span> Чоловічий</a>
+        <a href="women.html"><span class="s-icon">🚺</span> Жіночий</a>
+        <a href="kids.html"><span class="s-icon">🧒</span> Дитячий</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Інформація</div>
+        <a href="sizes.html"><span class="s-icon">📏</span> Таблиця розмірів</a>
+        <a href="about.html"><span class="s-icon">🏪</span> Про магазин</a>
+        <a href="contacts.html"><span class="s-icon">📞</span> Контакти</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Ми в соцмережах</div>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" class="fb" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" class="ig" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me" target="_blank" class="tg" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-badge">✨ НОВА КОЛЕКЦІЯ 2025</div>
+      <h1>Твій стиль —<br>твоя сила</h1>
+      <p>Відкрий найкращий одяг у Львові. Актуальні тренди, якісні матеріали та доступні ціни — все в одному місці.</p>
+      <div class="hero-btns">
+        <button class="btn-hero-main" onclick="location.href='catalog.html'"><i class="fa-solid fa-shirt"></i> Каталог</button>
+        <button class="btn-hero-sec" onclick="location.href='new.html'"><i class="fa-solid fa-star"></i> Новинки</button>
+        <button class="btn-hero-sec" onclick="location.href='actions.html'"><i class="fa-solid fa-tag"></i> Акції</button>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="f-icon">🚚</div>
+        <h4>Безкоштовна доставка</h4>
+        <p>При замовленні від 1 500 ₴</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">🔄</div>
+        <h4>Повернення 14 днів</h4>
+        <p>Без зайвих питань</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">✅</div>
+        <h4>Якісний одяг</h4>
+        <p>Перевірені бренди</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">📍</div>
+        <h4>Магазин у Львові</h4>
+        <p>вул. Князя Романа, 18</p>
+      </div>
+      <div class="feature-card">
+        <div class="f-icon">💳</div>
+        <h4>Безпечна оплата</h4>
+        <p>Картка або готівка</p>
+      </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="section-header">
+      <h2>Категорії <span>товарів</span></h2>
+      <a href="catalog.html" class="link-all">Всі товари →</a>
+    </div>
+    <div class="categories-grid">
+      <a href="catalog.html?cat=tshirt" class="cat-card">
+        <div class="cat-icon">👕</div>
+        <div class="cat-name">Футболки</div>
+        <div class="cat-count">3 товари</div>
+      </a>
+      <a href="catalog.html?cat=shirt" class="cat-card">
+        <div class="cat-icon">👔</div>
+        <div class="cat-name">Сорочки</div>
+        <div class="cat-count">1 товар</div>
+      </a>
+      <a href="catalog.html?cat=jeans" class="cat-card">
+        <div class="cat-icon">👖</div>
+        <div class="cat-name">Джинси</div>
+        <div class="cat-count">1 товар</div>
+      </a>
+      <a href="catalog.html?cat=dress" class="cat-card">
+        <div class="cat-icon">👗</div>
+        <div class="cat-name">Сукні</div>
+        <div class="cat-count">1 товар</div>
+      </a>
+      <a href="catalog.html?cat=jacket" class="cat-card">
+        <div class="cat-icon">🧥</div>
+        <div class="cat-name">Куртки</div>
+        <div class="cat-count">1 товар</div>
+      </a>
+      <a href="catalog.html?cat=hoodie" class="cat-card">
+        <div class="cat-icon">🧶</div>
+        <div class="cat-name">Худі</div>
+        <div class="cat-count">1 товар</div>
+      </a>
+      <a href="catalog.html?cat=pants" class="cat-card">
+        <div class="cat-icon">👖</div>
+        <div class="cat-name">Штани</div>
+        <div class="cat-count">1 товар</div>
+      </a>
+      <a href="catalog.html?cat=polo" class="cat-card">
+        <div class="cat-icon">👕</div>
+        <div class="cat-name">Поло</div>
+        <div class="cat-count">1 товар</div>
+      </a>
+    </div>
+
+    <!-- FEATURED PRODUCTS -->
+    <div class="section-header">
+      <h2>Популярні <span>товари</span></h2>
+      <a href="catalog.html" class="link-all">Всі товари →</a>
+    </div>
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card" data-id="1" data-name="Класична біла футболка" data-price="450" data-img="images/tshirt-white.jpg" data-cat="tshirt">
+        <div class="product-img-wrap">
+          <img src="images/tshirt-white.jpg" alt="Класична біла футболка" loading="lazy"/>
+          <span class="product-badge badge-new">Новинка</span>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Футболки</div>
+          <div class="product-name">Класична біла футболка</div>
+          <div class="product-price">450 ₴</div>
+          <div class="sizes-row">
+            <button class="size-btn">XS</button>
+            <button class="size-btn">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> В кошик</button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card" data-id="2" data-name="Чорна оверсайз футболка" data-price="520" data-img="images/tshirt-black.jpg" data-cat="tshirt">
+        <div class="product-img-wrap">
+          <img src="images/tshirt-black.jpg" alt="Чорна оверсайз футболка" loading="lazy"/>
+          <span class="product-badge badge-hit">Хіт</span>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Футболки</div>
+          <div class="product-name">Чорна оверсайз футболка</div>
+          <div class="product-price">520 ₴</div>
+          <div class="sizes-row">
+            <button class="size-btn">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> В кошик</button>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card" data-id="3" data-name="Смугаста футболка (синьо-біла)" data-price="480" data-img="images/tshirt-striped.jpg" data-cat="tshirt">
+        <div class="product-img-wrap">
+          <img src="images/tshirt-striped.jpg" alt="Смугаста футболка" loading="lazy"/>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Футболки</div>
+          <div class="product-name">Смугаста футболка (синьо-біла)</div>
+          <div class="product-price">480 ₴</div>
+          <div class="sizes-row">
+            <button class="size-btn">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> В кошик</button>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card" data-id="4" data-name="Поло-футболка темно-зелена" data-price="550" data-img="images/polo-darkgreen.jpg" data-cat="polo">
+        <div class="product-img-wrap">
+          <img src="images/polo-darkgreen.jpg" alt="Поло темно-зелена" loading="lazy"/>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Поло</div>
+          <div class="product-name">Поло-футболка темно-зелена</div>
+          <div class="product-price">550 ₴</div>
+          <div class="sizes-row">
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> В кошик</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVIEWS -->
+    <div class="section-header">
+      <h2>Відгуки <span>покупців</span></h2>
+    </div>
+    <div class="reviews-section">
+      <div id="reviewsList"></div>
+      <div class="form-card" style="margin-top:16px">
+        <h3>Залишити відгук</h3>
+        <form id="reviewForm">
+          <div class="form-group">
+            <label>Ваше ім'я</label>
+            <input type="text" name="rName" placeholder="Ім'я" required/>
+          </div>
+          <div class="form-group">
+            <label>Оцінка</label>
+            <div class="star-rating-group" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+              <input type="hidden" name="rRating" value="5"/>
+              <span class="star-lbl" data-val="1" style="cursor:pointer;font-size:1.4rem;color:#f59e0b" class="active">★</span>
+              <span class="star-lbl" data-val="2" style="cursor:pointer;font-size:1.4rem;color:#f59e0b" class="active">★</span>
+              <span class="star-lbl" data-val="3" style="cursor:pointer;font-size:1.4rem;color:#f59e0b" class="active">★</span>
+              <span class="star-lbl" data-val="4" style="cursor:pointer;font-size:1.4rem;color:#f59e0b" class="active">★</span>
+              <span class="star-lbl" data-val="5" style="cursor:pointer;font-size:1.4rem;color:#f59e0b" class="active">★</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Ваш відгук</label>
+            <textarea name="rText" placeholder="Напишіть свій відгук..." required maxlength="500"></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Надіслати відгук ⭐</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-f">Style<span>Lviv</span></span>
+      <p>Якісний одяг для всієї родини. Актуальні тренди та доступні ціни у Львові.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Каталог</h5>
+      <a href="catalog.html?cat=tshirt">Футболки</a>
+      <a href="catalog.html?cat=shirt">Сорочки</a>
+      <a href="catalog.html?cat=jeans">Джинси</a>
+      <a href="catalog.html?cat=dress">Сукні</a>
+      <a href="catalog.html?cat=jacket">Куртки</a>
+      <a href="catalog.html?cat=hoodie">Худі</a>
+      <a href="catalog.html?cat=pants">Штани</a>
+    </div>
+    <div class="footer-col">
+      <h5>Відділи</h5>
+      <a href="men.html">Чоловічий</a>
+      <a href="women.html">Жіночий</a>
+      <a href="kids.html">Дитячий</a>
+      <a href="new.html">Новинки</a>
+      <a href="actions.html">Акції</a>
+    </div>
+    <div class="footer-col">
+      <h5>Інформація</h5>
+      <a href="sizes.html">Таблиця розмірів</a>
+      <a href="about.html">Про магазин</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="register.html">Реєстрація</a>
+    </div>
+    <div class="footer-col">
+      <h5>Контакти</h5>
+      <a href="tel:+380322221616">📞 +38 (032) 222-16-16</a>
+      <a href="mailto:info@stylelviv.ua">✉️ info@stylelviv.ua</a>
+      <a href="contacts.html">📍 вул. Князя Романа, 18, Львів</a>
+      <p style="font-size:.78rem;color:#7c6fa0;margin-top:6px">Пн–Нд: 10:00 – 21:00</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 StyleLviv. Всі права захищені.</span>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" class="fb" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" class="ig" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://t.me" target="_blank" class="tg" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- AUTH MODAL -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box">
+    <button class="modal-close">✕</button>
+    <h3>👋 StyleLviv</h3>
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-tab="loginForm">Вхід</button>
+      <button class="modal-tab" data-tab="registerForm">Реєстрація</button>
+    </div>
+    <form id="loginForm" class="modal-form">
+      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required/></div>
+      <div class="form-group"><label>Пароль</label><input type="password" name="pass" placeholder="••••••" required/></div>
+      <button type="submit" class="btn-primary" style="width:100%">Увійти</button>
+    </form>
+    <form id="registerForm" class="modal-form" style="display:none">
+      <div class="form-group"><label>Ім'я</label><input type="text" name="name" placeholder="Ваше ім'я" required/></div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required/></div>
+      <div class="form-group"><label>Пароль</label><input type="password" name="pass" placeholder="Мін. 6 символів" required/></div>
+      <div class="form-group"><label>Повторіть пароль</label><input type="password" name="pass2" placeholder="••••••" required/></div>
+      <button type="submit" class="btn-primary" style="width:100%">Зареєструватись</button>
+    </form>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

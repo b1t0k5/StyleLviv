@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Кошик — StyleLviv</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<div class="topbar">
+  <span>🚚 Безкоштовна доставка при замовленні від 1 500 ₴</span>
+  <span>📍 Магазин у Львові, вул. Князя Романа, 18</span>
+</div>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">Style<span>Lviv</span></a>
+    <button class="mobile-menu-btn">☰</button>
+    <nav class="main-nav">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Головна</a>
+      <a href="catalog.html"><i class="fa-solid fa-shirt"></i> Каталог</a>
+      <a href="new.html"><i class="fa-solid fa-star"></i> Новинки</a>
+      <a href="actions.html"><i class="fa-solid fa-tag"></i> Акції</a>
+      <a href="sizes.html"><i class="fa-solid fa-ruler"></i> Розміри</a>
+      <a href="about.html"><i class="fa-solid fa-circle-info"></i> Про нас</a>
+      <a href="contacts.html"><i class="fa-solid fa-location-dot"></i> Контакти</a>
+    </nav>
+    <div class="header-icons">
+      <a href="cart.html" class="icon-btn active"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span></a>
+      <button class="auth-btn" data-open-auth>УВ</button>
+    </div>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <aside class="sidebar">
+    <div class="sidebar-sticky">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Категорії</div>
+        <a href="catalog.html"><span class="s-icon">🛍</span> Всі товари</a>
+        <a href="catalog.html?cat=tshirt"><span class="s-icon">👕</span> Футболки</a>
+        <a href="catalog.html?cat=shirt"><span class="s-icon">👔</span> Сорочки</a>
+        <a href="catalog.html?cat=jeans"><span class="s-icon">👖</span> Джинси</a>
+        <a href="catalog.html?cat=dress"><span class="s-icon">👗</span> Сукні</a>
+        <a href="catalog.html?cat=jacket"><span class="s-icon">🧥</span> Куртки</a>
+        <a href="catalog.html?cat=hoodie"><span class="s-icon">🧶</span> Худі</a>
+        <a href="catalog.html?cat=pants"><span class="s-icon">👖</span> Штани</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Інформація</div>
+        <a href="sizes.html"><span class="s-icon">📏</span> Таблиця розмірів</a>
+        <a href="about.html"><span class="s-icon">🏪</span> Про магазин</a>
+        <a href="contacts.html"><span class="s-icon">📞</span> Контакти</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Ми в соцмережах</div>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" class="ig"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me" target="_blank" class="tg"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-hero">
+      <h2><i class="fa-solid fa-cart-shopping"></i> Кошик</h2>
+      <p>Перевірте ваші товари та оформіть замовлення</p>
+    </div>
+    <div class="breadcrumb"><a href="index.html">Головна</a> / Кошик</div>
+
+    <!-- EMPTY CART -->
+    <div id="cartEmpty" class="empty-cart" style="display:none">
+      <div class="e-icon">🛒</div>
+      <h3>Ваш кошик порожній</h3>
+      <p>Додайте товари з каталогу, щоб продовжити покупки</p>
+      <a href="catalog.html"><button class="btn-primary">Перейти до каталогу</button></a>
+    </div>
+
+    <!-- CART FULL -->
+    <div id="cartFull" class="cart-layout" style="display:none">
+      <div>
+        <!-- Free shipping banner -->
+        <div class="free-ship-banner" id="freeShipBanner">
+          🚚 До безкоштовної доставки ще <strong>1 500 ₴</strong>
+          <div class="ship-progress"><div class="ship-progress-bar" id="shipProgress" style="width:0%"></div></div>
+        </div>
+        <div id="cartItems"></div>
+      </div>
+
+      <!-- ORDER SUMMARY -->
+      <div class="order-summary">
+        <h3>🧾 Оформлення замовлення</h3>
+        <div class="summary-row"><span>Сума товарів:</span><span id="summSubtotal">0 ₴</span></div>
+        <div class="summary-row" id="summDeliveryRow"><span>Доставка:</span><span id="summDelivery">0 ₴</span></div>
+        <div class="summary-row total"><span>Разом:</span><span id="summTotal">0 ₴</span></div>
+
+        <!-- DELIVERY OPTIONS -->
+        <div class="delivery-section">
+          <label>🚚 Спосіб доставки:</label>
+          <div class="delivery-option" data-cost="0">
+            <input type="radio" name="delivery" value="pickup"/>
+            <div class="delivery-option-info">
+              <strong>Самовивіз</strong>
+              <small>вул. Князя Романа, 18, Львів</small>
+            </div>
+            <span class="delivery-price">Безкоштовно</span>
+          </div>
+          <div class="delivery-option" data-cost="99">
+            <input type="radio" name="delivery" value="nova"/>
+            <div class="delivery-option-info">
+              <strong>Нова Пошта</strong>
+              <small>1-3 дні</small>
+            </div>
+            <span class="delivery-price">99 ₴</span>
+          </div>
+          <div class="delivery-option" data-cost="70">
+            <input type="radio" name="delivery" value="ukr"/>
+            <div class="delivery-option-info">
+              <strong>Укрпошта</strong>
+              <small>3-5 днів</small>
+            </div>
+            <span class="delivery-price">70 ₴</span>
+          </div>
+          <div class="delivery-option" data-cost="120">
+            <input type="radio" name="delivery" value="courier"/>
+            <div class="delivery-option-info">
+              <strong>Кур'єр по Львову</strong>
+              <small>Сьогодні або завтра</small>
+            </div>
+            <span class="delivery-price">120 ₴</span>
+          </div>
+        </div>
+
+        <!-- CHECKOUT FORM -->
+        <form id="checkoutForm" class="checkout-form">
+          <div class="form-group" style="margin-bottom:0">
+            <label style="font-size:.8rem;font-weight:700;color:var(--dark);display:block;margin-bottom:8px">👤 Ваші дані:</label>
+          </div>
+          <input type="text" name="cName" placeholder="Ваше ім'я та прізвище" required/>
+          <input type="tel" name="cPhone" placeholder="Номер телефону (+380...)" required/>
+          <input type="text" name="cAddr" placeholder="Адреса доставки / відділення" required/>
+          <button type="submit" class="btn-checkout">
+            <i class="fa-solid fa-check"></i> Оформити замовлення
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box" style="text-align:center">
+    <button class="modal-close">✕</button>
+    <div style="font-size:3.5rem;margin-bottom:14px">🎉</div>
+    <h3>Дякуємо за замовлення!</h3>
+    <p style="color:var(--gray);font-size:.9rem;margin-top:8px;line-height:1.6">
+      Ваше замовлення успішно оформлено.<br>
+      Ми зв'яжемося з вами найближчим часом для підтвердження! 😊
+    </p>
+    <button class="btn-primary" style="margin-top:20px;width:100%" onclick="location.href='index.html'">
+      На головну
+    </button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="logo-f">Style<span>Lviv</span></span><p>Якісний одяг для всієї родини.</p></div>
+    <div class="footer-col"><h5>Каталог</h5><a href="catalog.html">Всі товари</a><a href="new.html">Новинки</a><a href="actions.html">Акції</a></div>
+    <div class="footer-col"><h5>Відділи</h5><a href="men.html">Чоловічий</a><a href="women.html">Жіночий</a><a href="kids.html">Дитячий</a></div>
+    <div class="footer-col"><h5>Інформація</h5><a href="sizes.html">Розміри</a><a href="about.html">Про нас</a><a href="contacts.html">Контакти</a></div>
+    <div class="footer-col"><h5>Контакти</h5><a href="tel:+380322221616">📞 +38 (032) 222-16-16</a><a href="contacts.html">📍 вул. Князя Романа, 18</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 StyleLviv. Всі права захищені.</span>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" class="ig"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://t.me" target="_blank" class="tg"><i class="fa-brands fa-telegram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box">
+    <button class="modal-close">✕</button>
+    <h3>👋 StyleLviv</h3>
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-tab="loginForm">Вхід</button>
+      <button class="modal-tab" data-tab="registerForm">Реєстрація</button>
+    </div>
+    <form id="loginForm" class="modal-form">
+      <div class="form-group"><label>Email</label><input type="email" name="email" required/></div>
+      <div class="form-group"><label>Пароль</label><input type="password" name="pass" required/></div>
+      <button type="submit" class="btn-primary" style="width:100%">Увійти</button>
+    </form>
+    <form id="registerForm" class="modal-form" style="display:none">
+      <div class="form-group"><label>Ім'я</label><input type="text" name="name" required/></div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" required/></div>
+      <div class="form-group"><label>Пароль</label><input type="password" name="pass" required/></div>
+      <div class="form-group"><label>Повторіть пароль</label><input type="password" name="pass2" required/></div>
+      <button type="submit" class="btn-primary" style="width:100%">Зареєструватись</button>
+    </form>
+  </div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>

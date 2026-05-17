@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Жіночий відділ — StyleLviv</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<div class="topbar">
+  <span>🚚 Безкоштовна доставка при замовленні від 1 500 ₴</span>
+  <span>📍 Магазин у Львові, вул. Князя Романа, 18</span>
+</div>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">Style<span>Lviv</span></a>
+    <button class="mobile-menu-btn">☰</button>
+    <nav class="main-nav">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Головна</a>
+      <a href="catalog.html"><i class="fa-solid fa-shirt"></i> Каталог</a>
+      <a href="new.html"><i class="fa-solid fa-star"></i> Новинки</a>
+      <a href="actions.html"><i class="fa-solid fa-tag"></i> Акції</a>
+      <a href="sizes.html"><i class="fa-solid fa-ruler"></i> Розміри</a>
+      <a href="about.html"><i class="fa-solid fa-circle-info"></i> Про нас</a>
+      <a href="contacts.html"><i class="fa-solid fa-location-dot"></i> Контакти</a>
+    </nav>
+    <div class="header-icons">
+      <a href="cart.html" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span></a>
+      <button class="auth-btn" data-open-auth>УВ</button>
+    </div>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <aside class="sidebar">
+    <div class="sidebar-sticky">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Відділи</div>
+        <a href="men.html"><span class="s-icon">🚹</span> Чоловічий</a>
+        <a href="women.html" class="active"><span class="s-icon">🚺</span> Жіночий</a>
+        <a href="kids.html"><span class="s-icon">🧒</span> Дитячий</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Категорії</div>
+        <a href="catalog.html?cat=tshirt"><span class="s-icon">👕</span> Футболки</a>
+        <a href="catalog.html?cat=dress"><span class="s-icon">👗</span> Сукні</a>
+        <a href="catalog.html?cat=jeans"><span class="s-icon">👖</span> Джинси</a>
+        <a href="catalog.html?cat=jacket"><span class="s-icon">🧥</span> Куртки</a>
+        <a href="catalog.html?cat=pants"><span class="s-icon">👖</span> Штани</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Ми в соцмережах</div>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" class="ig"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me" target="_blank" class="tg"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="gender-hero women">
+      <h2>🚺 Жіночий відділ</h2>
+      <p>Елегантність, стиль та комфорт — все для сучасної жінки.</p>
+    </div>
+    <div class="breadcrumb"><a href="index.html">Головна</a> / Жіночий відділ</div>
+
+    <div class="products-grid">
+      <div class="product-card" data-id="1" data-name="Класична біла футболка" data-price="450" data-img="images/tshirt-white.jpg" data-cat="tshirt">
+        <div class="product-img-wrap"><img src="images/tshirt-white.jpg" alt="Біла футболка"/><span class="product-badge badge-new">Новинка</span></div>
+        <div class="product-body">
+          <div class="product-cat">Футболки</div>
+          <div class="product-name">Класична біла футболка</div>
+          <div class="product-price">450 ₴</div>
+          <div class="sizes-row"><button class="size-btn">XS</button><button class="size-btn">S</button><button class="size-btn">M</button><button class="size-btn">L</button><button class="size-btn">XL</button></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> В кошик</button>
+        </div>
+      </div>
+      <div class="product-card" data-id="3" data-name="Смугаста футболка синьо-біла" data-price="480" data-img="images/tshirt-striped.jpg" data-cat="tshirt">
+        <div class="product-img-wrap"><img src="images/tshirt-striped.jpg" alt="Смугаста футболка"/><span class="product-badge badge-new">Новинка</span></div>
+        <div class="product-body">
+          <div class="product-cat">Футболки</div>
+          <div class="product-name">Смугаста футболка синьо-біла</div>
+          <div class="product-price">480 ₴</div>
+          <div class="sizes-row"><button class="size-btn">S</button><button class="size-btn">M</button><button class="size-btn">L</button></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> В кошик</button>
+        </div>
+      </div>
+      <div class="product-card" data-id="7" data-name="Квіткова літня сукня" data-price="1350" data-img="images/dress-floral.jpg" data-cat="dress">
+        <div class="product-img-wrap"><img src="images/dress-floral.jpg" alt="Квіткова сукня"/><span class="product-badge badge-new">Новинка</span></div>
+        <div class="product-body">
+          <div class="product-cat">Сукні</div>
+          <div class="product-name">Квіткова літня сукня</div>
+          <div class="product-price">1 350 ₴</div>
+          <div class="sizes-row"><button class="size-btn">XS</button><button class="size-btn">S</button><button class="size-btn">M</button><button class="size-btn">L</button></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> В кошик</button>
+        </div>
+      </div>
+      <div class="product-card" data-id="6" data-name="Сині класичні джинси" data-price="1190" data-img="images/jeans-blue.jpg" data-cat="jeans">
+        <div class="product-img-wrap"><img src="images/jeans-blue.jpg" alt="Джинси"/><span class="product-badge badge-hit">Хіт</span></div>
+        <div class="product-body">
+          <div class="product-cat">Джинси</div>
+          <div class="product-name">Сині класичні джинси</div>
+          <div class="product-price">1 190 ₴</div>
+          <div class="sizes-row"><button class="size-btn">XS</button><button class="size-btn">S</button><button class="size-btn">M</button><button class="size-btn">L</button></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> В кошик</button>
+        </div>
+      </div>
+      <div class="product-card" data-id="8" data-name="Сіре худі з кишенею" data-price="980" data-img="images/hoodie-gray.jpg" data-cat="hoodie">
+        <div class="product-img-wrap"><img src="images/hoodie-gray.jpg" alt="Сіре худі"/></div>
+        <div class="product-body">
+          <div class="product-cat">Худі</div>
+          <div class="product-name">Сіре худі з кишенею</div>
+          <div class="product-price">980 ₴</div>
+          <div class="sizes-row"><button class="size-btn">S</button><button class="size-btn">M</button><button class="size-btn">L</button><button class="size-btn">XL</button></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> В кошик</button>
+        </div>
+      </div>
+      <div class="product-card" data-id="10" data-name="Бежеві штани чіно" data-price="890" data-img="images/pants-beige.jpg" data-cat="pants">
+        <div class="product-img-wrap"><img src="images/pants-beige.jpg" alt="Штани"/></div>
+        <div class="product-body">
+          <div class="product-cat">Штани</div>
+          <div class="product-name">Бежеві штани чіно</div>
+          <div class="product-price">890 ₴</div>
+          <div class="sizes-row"><button class="size-btn">XS</button><button class="size-btn">S</button><button class="size-btn">M</button><button class="size-btn">L</button></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> В кошик</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="logo-f">Style<span>Lviv</span></span><p>Якісний одяг для всієї родини. Актуальні тренди та доступні ціни у Львові.</p></div>
+    <div class="footer-col"><h5>Каталог</h5><a href="catalog.html?cat=tshirt">Футболки</a><a href="catalog.html?cat=dress">Сукні</a><a href="catalog.html?cat=jeans">Джинси</a></div>
+    <div class="footer-col"><h5>Відділи</h5><a href="men.html">Чоловічий</a><a href="women.html">Жіночий</a><a href="kids.html">Дитячий</a></div>
+    <div class="footer-col"><h5>Інформація</h5><a href="sizes.html">Таблиця розмірів</a><a href="about.html">Про магазин</a><a href="contacts.html">Контакти</a></div>
+    <div class="footer-col"><h5>Контакти</h5><a href="tel:+380322221616">📞 +38 (032) 222-16-16</a><a href="contacts.html">📍 вул. Князя Романа, 18</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 StyleLviv. Всі права захищені.</span>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" class="ig"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://t.me" target="_blank" class="tg"><i class="fa-brands fa-telegram"></i></a>
+    </div>
+  </div>
+</footer>
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box">
+    <button class="modal-close">✕</button>
+    <h3>👋 StyleLviv</h3>
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-tab="loginForm">Вхід</button>
+      <button class="modal-tab" data-tab="registerForm">Реєстрація</button>
+    </div>
+    <form id="loginForm" class="modal-form">
+      <div class="form-group"><label>Email</label><input type="email" name="email" required/></div>
+      <div class="form-group"><label>Пароль</label><input type="password" name="pass" required/></div>
+      <button type="submit" class="btn-primary" style="width:100%">Увійти</button>
+    </form>
+    <form id="registerForm" class="modal-form" style="display:none">
+      <div class="form-group"><label>Ім'я</label><input type="text" name="name" required/></div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" required/></div>
+      <div class="form-group"><label>Пароль</label><input type="password" name="pass" required/></div>
+      <div class="form-group"><label>Повторіть пароль</label><input type="password" name="pass2" required/></div>
+      <button type="submit" class="btn-primary" style="width:100%">Зареєструватись</button>
+    </form>
+  </div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
